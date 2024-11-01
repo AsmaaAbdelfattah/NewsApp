@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UserDefaults.standard.setApiKey(value: "c7f42d18ae8147f89af76d3cfe33b825")
+        UserDefaults.standard.setBase(value: "https://newsapi.org/v2")
         return true
     }
 

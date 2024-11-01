@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ArticlesCVCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="174" height="266"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="174" height="266"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="270-dF-y2C">
+                        <rect key="frame" x="6" y="6" width="162" height="254"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-2m-hU9">
+                                <rect key="frame" x="4" y="4" width="154" height="86.666666666666671"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-D2-QDT">
+                                <rect key="frame" x="4" y="94.666666666666671" width="154" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="aZy-7f-RXA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLQ-py-npM">
+                                <rect key="frame" x="4" y="118.66666666666669" width="44.666666666666664" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nx-4U-wy5">
+                                        <rect key="frame" x="8.0000000000000018" y="7.9999999999999858" width="28.666666666666671" height="9"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="0.38823529411764707" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7nx-4U-wy5" secondAttribute="bottom" constant="8" id="Foz-io-THc"/>
+                                    <constraint firstAttribute="trailing" secondItem="7nx-4U-wy5" secondAttribute="trailing" constant="8" id="HGQ-Yz-Cfm"/>
+                                    <constraint firstItem="7nx-4U-wy5" firstAttribute="top" secondItem="jLQ-py-npM" secondAttribute="top" constant="8" id="kxo-ae-eTZ"/>
+                                    <constraint firstItem="7nx-4U-wy5" firstAttribute="leading" secondItem="jLQ-py-npM" secondAttribute="leading" constant="8" id="vtb-JG-OLB"/>
+                                    <constraint firstAttribute="height" constant="25" id="yYi-iH-Chy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Tesla CEO wants the Philadelphia district attorney's case against his $1 million giveaway moved to federal court." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRs-U6-TFe">
+                                <rect key="frame" x="4" y="147.66666666666666" width="154" height="102.33333333333334"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3dW-2m-hU9" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="5kV-iH-Ra9"/>
+                            <constraint firstAttribute="trailing" secondItem="CRs-U6-TFe" secondAttribute="trailing" constant="4" id="5xI-KY-xra"/>
+                            <constraint firstItem="CRs-U6-TFe" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="9nS-mn-z12"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jLQ-py-npM" secondAttribute="trailing" constant="4" id="FT0-aE-xDh"/>
+                            <constraint firstAttribute="trailing" secondItem="3dW-2m-hU9" secondAttribute="trailing" constant="4" id="Pxx-Jy-QcA"/>
+                            <constraint firstAttribute="bottom" secondItem="CRs-U6-TFe" secondAttribute="bottom" constant="4" id="QSj-QW-Adh"/>
+                            <constraint firstItem="CRs-U6-TFe" firstAttribute="top" secondItem="jLQ-py-npM" secondAttribute="bottom" constant="4" id="Rc1-bW-Ftw"/>
+                            <constraint firstItem="y6y-D2-QDT" firstAttribute="top" secondItem="3dW-2m-hU9" secondAttribute="bottom" constant="4" id="VvN-ek-aZs"/>
+                            <constraint firstItem="jLQ-py-npM" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="Wix-qY-5Jv"/>
+                            <constraint firstItem="jLQ-py-npM" firstAttribute="top" secondItem="y6y-D2-QDT" secondAttribute="bottom" constant="4" id="eAx-4l-Kp5"/>
+                            <constraint firstAttribute="trailing" secondItem="y6y-D2-QDT" secondAttribute="trailing" constant="4" id="pUa-Ux-Fkj"/>
+                            <constraint firstItem="y6y-D2-QDT" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="s6m-AI-7cH"/>
+                            <constraint firstItem="3dW-2m-hU9" firstAttribute="top" secondItem="270-dF-y2C" secondAttribute="top" constant="4" id="xDu-cw-dfj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="270-dF-y2C" secondAttribute="bottom" constant="6" id="Cpc-fv-G8a"/>
+                <constraint firstAttribute="trailing" secondItem="270-dF-y2C" secondAttribute="trailing" constant="6" id="MWC-rI-EX7"/>
+                <constraint firstItem="270-dF-y2C" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="Weu-C3-DsC"/>
+                <constraint firstItem="3dW-2m-hU9" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.5" id="hEI-0l-F9D"/>
+                <constraint firstItem="270-dF-y2C" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="kQR-4f-Dep"/>
+            </constraints>
+            <size key="customSize" width="174" height="266"/>
+            <connections>
+                <outlet property="articleImg" destination="3dW-2m-hU9" id="Jxt-61-lMY"/>
+                <outlet property="articleTit" destination="y6y-D2-QDT" id="Pms-E6-7pY"/>
+                <outlet property="authorLbl" destination="7nx-4U-wy5" id="XWK-RC-hGc"/>
+                <outlet property="capsuleView" destination="jLQ-py-npM" id="bbx-Ng-sKV"/>
+                <outlet property="cardView" destination="270-dF-y2C" id="yyU-k8-3KS"/>
+                <outlet property="descLbl" destination="CRs-U6-TFe" id="z97-2L-NIN"/>
+            </connections>
+            <point key="canvasLocation" x="148" y="95"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

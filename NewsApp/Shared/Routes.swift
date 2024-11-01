@@ -10,15 +10,15 @@ import Foundation
 enum Networking{
     private var baseURL: String { return  UserDefaults.standard.getBase()}
    
-    case articles
+    case articles(String , String,Int)
 }
 extension Networking{
 
     var fullPath :String {
         var endPoint: String
         switch self {
-        case .articles:
-            endPoint = ""
+        case .articles(let date , let searchTxt,let page):
+            endPoint = "/everything?q=\(searchTxt)&from=\(date)&sortBy=popularity&apiKey=\(UserDefaults.standard.getApiKey())&page=\(page)&pageSize=15"
         }
         return baseURL + endPoint
     }

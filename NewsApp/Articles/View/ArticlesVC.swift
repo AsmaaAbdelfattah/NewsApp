@@ -11,8 +11,16 @@ import NVActivityIndicatorView
 class ArticlesVC: UIViewController {
 
     //MARK: Outlets
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var date: UIDatePicker!
+    @IBOutlet weak var searchBar: UISearchBar!{
+        didSet{
+            searchBar.delegate = self
+        }
+    }
+    @IBOutlet weak var date: UIDatePicker!{
+        didSet{
+            date.setValue(UIColor.systemBlue, forKey: "textColor")
+        }
+    }
     @IBOutlet weak var articlesCv: UICollectionView!{
         didSet{
             articlesCv.register(UINib(nibName: "ArticlesCVCell", bundle: nil), forCellWithReuseIdentifier: "ArticlesCVCell")
@@ -21,24 +29,42 @@ class ArticlesVC: UIViewController {
         }
     }
     @IBOutlet weak var indicator: NVActivityIndicatorView!
+    
     //MARK: Vars
     var cancellables = Set<AnyCancellable>()
     var viewModel = ArticleViewModel()
+    var searchTxt:String = "tesla"
+    var dateValue:String?
+    
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindArticles()
+        dateValue = formatDate(from: date.date)
+        if let date = dateValue {
+            bindArticles(date: date, searchTxt: searchTxt)
+        }
     }
  
    //MARK: get data
-    func bindArticles(){
+    func bindArticles(date:String, searchTxt:String){
         indicator.showIndicator(start: true)
-        viewModel.getArticles()
+        viewModel.getArticles(date: date, searchTxt: searchTxt)
         viewModel.$articles.receive(on: DispatchQueue.main).sink { [weak self] _ in
             self?.indicator.showIndicator(start: false)
             self?.articlesCv.reloadData()
         }.store(in: &cancellables)
     }
+    
+
+    
+    @IBAction func changeDate(_ sender: UIDatePicker) {
+        dateValue = formatDate(from: sender.date)
+        if let date = dateValue {
+            bindArticles(date: date, searchTxt: searchTxt)
+        }
+        dismiss(animated: true)
+    }
+    
 }
 
 extension ArticlesVC:UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -59,4 +85,15 @@ extension ArticlesVC:UICollectionViewDelegate, UICollectionViewDataSource , UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
     }
+}
+extension ArticlesVC : UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            bindArticles(date: dateValue ?? "", searchTxt: "tesla")
+        }else{
+            bindArticles(date: dateValue ?? "", searchTxt: searchText)
+        }
+    }
+    
 }

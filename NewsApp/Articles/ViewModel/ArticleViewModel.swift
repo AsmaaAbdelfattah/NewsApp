@@ -13,17 +13,16 @@ class ArticleViewModel {
     @Published var errorMessage: String?
 
        private var cancellables = Set<AnyCancellable>()
-    func getArticles() {
-        networkService.articlePublisher.sink { completion in
+    func getArticles(date:String, searchTxt:String) {
+        networkService.getArticles(date: date, searchTxt: searchTxt).sink { completion in
             switch completion {
             case .finished:
                 print("finished")
             case .failure(let error):
-                
                 print(error.localizedDescription)
             }
         } receiveValue: {[weak self] articles in
-            print(articles)
+           
             self?.articles = articles.articles?.reversed() ?? []
         }.store(in: &cancellables)
 

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,17 +40,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="AqT-k3-HIQ">
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqT-k3-HIQ">
                     <rect key="frame" x="221.66666666666663" y="134" width="157.33333333333337" height="44"/>
+                    <color key="tintColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="9fU-7M-A9j"/>
                     </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="749500135.61598396">
+                        <!--2024-10-01 18:28:55 +0000-->
+                    </date>
                     <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                         <!--2020-01-01 11:00:00 +0000-->
                     </date>
                     <date key="maximumDate" timeIntervalSinceReferenceDate="757335600">
                         <!--2024-12-31 11:00:00 +0000-->
                     </date>
+                    <connections>
+                        <action selector="changeDate:" destination="-1" eventType="valueChanged" id="IKM-LI-VdB"/>
+                    </connections>
                 </datePicker>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-6s-hNC">
                     <rect key="frame" x="14" y="188" width="365" height="1"/>
@@ -102,6 +110,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

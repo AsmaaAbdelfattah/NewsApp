@@ -25,4 +25,11 @@ class NetworkServiceManager{
         return URLSession.shared.dataTaskPublisher(for: url).map {$0.data}.decode(type: Articles.self, decoder: JSONDecoder()).receive(on: RunLoop.main).eraseToAnyPublisher()
     }
     
+    func getArticles(date:String, searchTxt:String ) -> AnyPublisher<Articles,Error>{
+        guard let url = URL(string: Networking.articles(date, searchTxt).fullPath)
+        else {return Fail(error: URLError(.badURL)).eraseToAnyPublisher()}
+                print(url)
+        return URLSession.shared.dataTaskPublisher(for: url).map {$0.data}.decode(type: Articles.self, decoder: JSONDecoder()).receive(on: RunLoop.main).eraseToAnyPublisher()
+    }
+    
 }

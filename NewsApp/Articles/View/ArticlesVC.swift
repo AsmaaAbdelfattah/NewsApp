@@ -35,7 +35,8 @@ class ArticlesVC: UIViewController {
     var viewModel = ArticleViewModel()
     var searchTxt:String = "tesla"
     var dateValue:String?
-    
+    var page = 1
+    var currentIndex = 0
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class ArticlesVC: UIViewController {
    //MARK: get data
     func bindArticles(date:String, searchTxt:String){
         indicator.showIndicator(start: true)
-        viewModel.getArticles(date: date, searchTxt: searchTxt)
+        viewModel.getArticles(date: date, searchTxt: searchTxt,page: page)
         viewModel.$articles.receive(on: DispatchQueue.main).sink { [weak self] _ in
             self?.indicator.showIndicator(start: false)
             self?.articlesCv.reloadData()
@@ -84,6 +85,21 @@ extension ArticlesVC:UICollectionViewDelegate, UICollectionViewDataSource , UICo
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
+    }
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        if indexPath.row  == viewModel.articles.count - 1 {
+//            page += 1
+//            bindArticles(date: dateValue ?? "", searchTxt: searchTxt)
+//        }
+//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height - scrollView.frame.size.height
+
+        if position > contentHeight  {
+            page += 1
+            bindArticles(date: dateValue ?? "", searchTxt: searchTxt)
+        }
     }
 }
 extension ArticlesVC : UISearchBarDelegate {

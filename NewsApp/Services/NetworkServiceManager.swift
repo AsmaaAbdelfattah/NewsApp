@@ -19,14 +19,14 @@ class NetworkServiceManager{
     }
     
     var articlePublisher: AnyPublisher<Articles,Error>{
-        guard let url = URL(string: Networking.articles("2024-10-1", "tesla").fullPath)
+        guard let url = URL(string: Networking.articles("2024-10-1", "tesla",1).fullPath)
         else {return Fail(error: URLError(.badURL)).eraseToAnyPublisher()}
                 print(url)
         return URLSession.shared.dataTaskPublisher(for: url).map {$0.data}.decode(type: Articles.self, decoder: JSONDecoder()).receive(on: RunLoop.main).eraseToAnyPublisher()
     }
     
-    func getArticles(date:String, searchTxt:String ) -> AnyPublisher<Articles,Error>{
-        guard let url = URL(string: Networking.articles(date, searchTxt).fullPath)
+    func getArticles(date:String, searchTxt:String ,page:Int) -> AnyPublisher<Articles,Error>{
+        guard let url = URL(string: Networking.articles(date, searchTxt,page).fullPath)
         else {return Fail(error: URLError(.badURL)).eraseToAnyPublisher()}
                 print(url)
         return URLSession.shared.dataTaskPublisher(for: url).map {$0.data}.decode(type: Articles.self, decoder: JSONDecoder()).receive(on: RunLoop.main).eraseToAnyPublisher()

@@ -39,9 +39,9 @@ class ArticlesVC: UIViewController {
         super.viewDidLoad()
         date.setValue(UIColor.red, forKeyPath: "textColor")
         dateValue = formatDate(from: date.date)
-        if let date = dateValue {
-            bindArticles(date: date, searchTxt: searchTxt)
-        }
+//        if let date = dateValue {
+//            bindArticles(date: date, searchTxt: searchTxt)
+//        }
     }
  
    //MARK: get data
@@ -83,6 +83,12 @@ extension ArticlesVC:UICollectionViewDelegate, UICollectionViewDataSource , UICo
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = Details(nibName: "Details", bundle: nil)
+        vc.title = "Details"
+        vc
+        navigationController?.pushViewController(vc, animated: true)
     }
 //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 //        if indexPath.row  == viewModel.articles.count - 1 {

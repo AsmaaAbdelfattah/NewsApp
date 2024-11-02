@@ -19,6 +19,8 @@
 		742B25912CD534CA00BA6E1C /* Articles.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742B25902CD534CA00BA6E1C /* Articles.xib */; };
 		742B25942CD5350900BA6E1C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B25932CD5350900BA6E1C /* UserDefaults.swift */; };
 		742B25962CD5351300BA6E1C /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B25952CD5351300BA6E1C /* Routes.swift */; };
+		748DAB4C2CD64ACF00C88064 /* Details.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748DAB4B2CD64ACF00C88064 /* Details.xib */; };
+		748DAB4D2CD64ACF00C88064 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DAB4A2CD64ACF00C88064 /* Details.swift */; };
 		749974E52CD550E40079B802 /* NetworkServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749974E42CD550E40079B802 /* NetworkServiceManager.swift */; };
 		749974E72CD5534E0079B802 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749974E62CD5534E0079B802 /* ArticleViewModel.swift */; };
 		749974EA2CD55C180079B802 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749974E92CD55C180079B802 /* Indicator.swift */; };
@@ -66,6 +68,8 @@
 		742B25902CD534CA00BA6E1C /* Articles.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Articles.xib; sourceTree = "<group>"; };
 		742B25932CD5350900BA6E1C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		742B25952CD5351300BA6E1C /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		748DAB4A2CD64ACF00C88064 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		748DAB4B2CD64ACF00C88064 /* Details.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Details.xib; sourceTree = "<group>"; };
 		749974E42CD550E40079B802 /* NetworkServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceManager.swift; sourceTree = "<group>"; };
 		749974E62CD5534E0079B802 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		749974E92CD55C180079B802 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		742B255D2CD5306B00BA6E1C /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				748DAB482CD64AB200C88064 /* Details */,
 				749974E82CD55C0A0079B802 /* EXT */,
 				749974E32CD550C30079B802 /* Services */,
 				742B25972CD5369100BA6E1C /* Utilities */,
@@ -211,6 +216,23 @@
 				742B25602CD5306B00BA6E1C /* SceneDelegate.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		748DAB482CD64AB200C88064 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				748DAB492CD64AB900C88064 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		748DAB492CD64AB900C88064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				748DAB4A2CD64ACF00C88064 /* Details.swift */,
+				748DAB4B2CD64ACF00C88064 /* Details.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		749974E32CD550C30079B802 /* Services */ = {
@@ -357,6 +379,7 @@
 				742B25682CD5306C00BA6E1C /* Assets.xcassets in Resources */,
 				742B256B2CD5306C00BA6E1C /* Base in Resources */,
 				7428ABE22CD54A2400523034 /* ArticlesCVCell.xib in Resources */,
+				748DAB4C2CD64ACF00C88064 /* Details.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +515,7 @@
 				749974E52CD550E40079B802 /* NetworkServiceManager.swift in Sources */,
 				749974EF2CD564860079B802 /* ViewController.swift in Sources */,
 				7428ABE32CD54A2400523034 /* ArticlesCVCell.swift in Sources */,
+				748DAB4D2CD64ACF00C88064 /* Details.swift in Sources */,
 				749974E72CD5534E0079B802 /* ArticleViewModel.swift in Sources */,
 				742B255F2CD5306B00BA6E1C /* AppDelegate.swift in Sources */,
 				749974EC2CD55D870079B802 /* View.swift in Sources */,

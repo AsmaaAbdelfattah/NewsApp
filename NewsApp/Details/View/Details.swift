@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Combine
 class Details: UIViewController {
 
     //MARK: Outlets
@@ -32,11 +33,15 @@ class Details: UIViewController {
     
     //MARK: Vars
     var article: Article?
+    var viewModel = FavouriteViewModel()
+    var cancellables = Set<AnyCancellable>()
     
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-       bindArticle()
+        
+        bindArticle()
+        handleSaveToCoreData()
     }
     
     //MARK: bind article details
@@ -52,8 +57,24 @@ class Details: UIViewController {
         }
     }
 
+    func handleSaveToCoreData(){
+    viewModel.$savedSuccesfully.receive(on: DispatchQueue.main).sink {[weak self] succes in
+        guard let successed = succes else {return}
+        if successed {
+            let alert = UIAlertController(title: self?.article?.title , message:"added to favourite succesfully", preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { action in
+                self?.navigationController?.popViewController(animated: true)
+            })
+            action.setValue(UIColor.red, forKey: "titleTextColor")
+            alert.addAction(action)
+            self?.present(alert, animated: true, completion: nil)
+        }
+        }.store(in: &cancellables)
+    }
 
     @IBAction func favTapped(_ sender: Any) {
-   
+        if let article = article, !(article.isFav ?? false){
+            viewModel.addArticle(article: article)
+        }
     }
 }

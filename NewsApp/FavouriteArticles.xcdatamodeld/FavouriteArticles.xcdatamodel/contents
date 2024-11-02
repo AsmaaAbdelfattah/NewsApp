@@ -6,10 +6,8 @@
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isFav" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="publishedAt" optional="YES" attributeType="String"/>
         <attribute name="sourceId" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="url" optional="YES" attributeType="String"/>
         <attribute name="urlToImage" optional="YES" attributeType="String"/>
     </entity>
 </model>

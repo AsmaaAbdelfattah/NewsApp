@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
        
-        let rootViewController: UIViewController = Details(nibName: "Details", bundle: nil)
+        let rootViewController: UIViewController = Favourite(nibName: "Favourite", bundle: nil)
         let navigationController = UINavigationController()
         navigationController.navigationBar.prefersLargeTitles = true
         rootViewController.title = "News"

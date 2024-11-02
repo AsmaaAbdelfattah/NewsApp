@@ -28,5 +28,4 @@ struct Article: Decodable {
     var content: String
     var isFav:Bool?
 
-    
 }

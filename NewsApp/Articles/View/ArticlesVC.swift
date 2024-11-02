@@ -87,7 +87,7 @@ extension ArticlesVC:UICollectionViewDelegate, UICollectionViewDataSource , UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = Details(nibName: "Details", bundle: nil)
         vc.title = "Details"
-        vc
+        vc.article = viewModel.articles[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

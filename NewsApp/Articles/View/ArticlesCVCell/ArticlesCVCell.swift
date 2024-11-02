@@ -10,7 +10,7 @@ import Kingfisher
 class ArticlesCVCell: UICollectionViewCell {
     @IBOutlet weak var cardView: UIView!{
         didSet{
-            cardView.dropShadow()
+            cardView.layer.cornerRadius = 12
         }
     }
     

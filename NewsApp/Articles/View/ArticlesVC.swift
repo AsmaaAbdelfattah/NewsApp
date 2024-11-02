@@ -44,9 +44,9 @@ class ArticlesVC: UIViewController {
         super.viewDidLoad()
         date.setValue(UIColor.red, forKeyPath: "textColor")
         dateValue = formatDate(from: date.date)
-//        if let date = dateValue {
-//            bindArticles(date: date, searchTxt: searchTxt)
-//        }
+        if let date = dateValue {
+            bindArticles(date: date, searchTxt: searchTxt)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,7 +57,7 @@ class ArticlesVC: UIViewController {
    //MARK: get data
     func bindArticles(date:String, searchTxt:String){
         indicator.showIndicator(start: true)
-        viewModel.getArticles(date: date, searchTxt: searchTxt,page: page)
+        viewModel.getArticles(date: date, searchTxt: searchTxt)
         viewModel.$articles.receive(on: DispatchQueue.main).sink { [weak self] _ in
             self?.indicator.showIndicator(start: false)
             self?.articlesCv.reloadData()

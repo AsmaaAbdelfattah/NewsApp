@@ -35,19 +35,29 @@ class ArticlesVC: UIViewController {
     var currentIndex = 0
     
     //MARK: lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addRightButton()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         date.setValue(UIColor.red, forKeyPath: "textColor")
         dateValue = formatDate(from: date.date)
-//        if let date = dateValue {
-//            bindArticles(date: date, searchTxt: searchTxt)
-//        }
+        if let date = dateValue {
+            bindArticles(date: date, searchTxt: searchTxt)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeRightButton()
     }
  
    //MARK: get data
     func bindArticles(date:String, searchTxt:String){
         indicator.showIndicator(start: true)
-        viewModel.getArticles(date: date, searchTxt: searchTxt,page: page)
+        viewModel.getArticles(date: date, searchTxt: searchTxt)
         viewModel.$articles.receive(on: DispatchQueue.main).sink { [weak self] _ in
             self?.indicator.showIndicator(start: false)
             self?.articlesCv.reloadData()
@@ -87,7 +97,7 @@ extension ArticlesVC:UICollectionViewDelegate, UICollectionViewDataSource , UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = Details(nibName: "Details", bundle: nil)
         vc.title = "Details"
-        vc
+        vc.article = viewModel.articles[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 //    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -88,7 +88,7 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HwA-ZK-lhu" secondAttribute="trailing" constant="4" id="09M-jg-cpJ"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HwA-ZK-lhu" secondAttribute="trailing" constant="20" id="09M-jg-cpJ"/>
                                 <constraint firstItem="OwC-DH-F6Z" firstAttribute="leading" secondItem="Rxg-ez-qk0" secondAttribute="leading" constant="25" id="9Kc-fY-kXi"/>
                                 <constraint firstItem="alw-ZG-69o" firstAttribute="top" secondItem="OwC-DH-F6Z" secondAttribute="bottom" constant="8" id="AHu-CF-X2R"/>
                                 <constraint firstAttribute="bottom" secondItem="Nhu-9n-wWh" secondAttribute="bottom" constant="20" id="Col-8T-bur"/>
@@ -98,7 +98,7 @@
                                 <constraint firstItem="HwA-ZK-lhu" firstAttribute="top" secondItem="6UD-L2-sNs" secondAttribute="bottom" constant="14" id="Qqj-wb-i0I"/>
                                 <constraint firstItem="alw-ZG-69o" firstAttribute="leading" secondItem="Rxg-ez-qk0" secondAttribute="leading" constant="25" id="biK-fD-aYI"/>
                                 <constraint firstItem="6UD-L2-sNs" firstAttribute="top" secondItem="Rxg-ez-qk0" secondAttribute="top" constant="25" id="hA4-Wc-g4z"/>
-                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OwC-DH-F6Z" secondAttribute="trailing" constant="4" id="hiY-uy-z3G"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OwC-DH-F6Z" secondAttribute="trailing" constant="20" id="hiY-uy-z3G"/>
                                 <constraint firstAttribute="trailing" secondItem="6UD-L2-sNs" secondAttribute="trailing" constant="25" id="i42-MK-sMZ"/>
                                 <constraint firstAttribute="trailing" secondItem="Nhu-9n-wWh" secondAttribute="trailing" constant="25" id="q0q-Os-1yZ"/>
                                 <constraint firstItem="Nhu-9n-wWh" firstAttribute="top" secondItem="alw-ZG-69o" secondAttribute="bottom" constant="13" id="reu-Td-Qiu"/>
@@ -138,7 +138,7 @@
     <resources>
         <image name="image" width="306" height="319"/>
         <namedColor name="Background">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

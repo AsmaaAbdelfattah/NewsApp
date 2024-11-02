@@ -21,10 +21,10 @@
                         <rect key="frame" x="6" y="6" width="162" height="254"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-2m-hU9">
-                                <rect key="frame" x="4" y="4" width="154" height="86.666666666666671"/>
+                                <rect key="frame" x="10" y="10" width="142" height="86.666666666666671"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-D2-QDT">
-                                <rect key="frame" x="4" y="94.666666666666671" width="154" height="20"/>
+                                <rect key="frame" x="10" y="100.66666666666667" width="142" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="aZy-7f-RXA"/>
                                 </constraints>
@@ -33,10 +33,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLQ-py-npM">
-                                <rect key="frame" x="4" y="118.66666666666669" width="44.666666666666664" height="25"/>
+                                <rect key="frame" x="9.9999999999999964" y="124.66666666666666" width="44.666666666666657" height="25"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nx-4U-wy5">
-                                        <rect key="frame" x="8.0000000000000018" y="7.9999999999999858" width="28.666666666666671" height="9"/>
+                                        <rect key="frame" x="8.0000000000000018" y="8" width="28.666666666666671" height="9"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.38823529411764707" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Tesla CEO wants the Philadelphia district attorney's case against his $1 million giveaway moved to federal court." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRs-U6-TFe">
-                                <rect key="frame" x="4" y="147.66666666666666" width="154" height="102.33333333333334"/>
+                                <rect key="frame" x="10" y="153.66666666666666" width="142" height="96.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -60,19 +60,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3dW-2m-hU9" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="5kV-iH-Ra9"/>
-                            <constraint firstAttribute="trailing" secondItem="CRs-U6-TFe" secondAttribute="trailing" constant="4" id="5xI-KY-xra"/>
-                            <constraint firstItem="CRs-U6-TFe" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="9nS-mn-z12"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jLQ-py-npM" secondAttribute="trailing" constant="4" id="FT0-aE-xDh"/>
-                            <constraint firstAttribute="trailing" secondItem="3dW-2m-hU9" secondAttribute="trailing" constant="4" id="Pxx-Jy-QcA"/>
+                            <constraint firstItem="3dW-2m-hU9" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="10" id="5kV-iH-Ra9"/>
+                            <constraint firstAttribute="trailing" secondItem="CRs-U6-TFe" secondAttribute="trailing" constant="10" id="5xI-KY-xra"/>
+                            <constraint firstItem="CRs-U6-TFe" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="10" id="9nS-mn-z12"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jLQ-py-npM" secondAttribute="trailing" constant="10" id="FT0-aE-xDh"/>
+                            <constraint firstAttribute="trailing" secondItem="3dW-2m-hU9" secondAttribute="trailing" constant="10" id="Pxx-Jy-QcA"/>
                             <constraint firstAttribute="bottom" secondItem="CRs-U6-TFe" secondAttribute="bottom" constant="4" id="QSj-QW-Adh"/>
                             <constraint firstItem="CRs-U6-TFe" firstAttribute="top" secondItem="jLQ-py-npM" secondAttribute="bottom" constant="4" id="Rc1-bW-Ftw"/>
                             <constraint firstItem="y6y-D2-QDT" firstAttribute="top" secondItem="3dW-2m-hU9" secondAttribute="bottom" constant="4" id="VvN-ek-aZs"/>
-                            <constraint firstItem="jLQ-py-npM" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="Wix-qY-5Jv"/>
+                            <constraint firstItem="jLQ-py-npM" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="10" id="Wix-qY-5Jv"/>
                             <constraint firstItem="jLQ-py-npM" firstAttribute="top" secondItem="y6y-D2-QDT" secondAttribute="bottom" constant="4" id="eAx-4l-Kp5"/>
-                            <constraint firstAttribute="trailing" secondItem="y6y-D2-QDT" secondAttribute="trailing" constant="4" id="pUa-Ux-Fkj"/>
-                            <constraint firstItem="y6y-D2-QDT" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="4" id="s6m-AI-7cH"/>
-                            <constraint firstItem="3dW-2m-hU9" firstAttribute="top" secondItem="270-dF-y2C" secondAttribute="top" constant="4" id="xDu-cw-dfj"/>
+                            <constraint firstAttribute="trailing" secondItem="y6y-D2-QDT" secondAttribute="trailing" constant="10" id="pUa-Ux-Fkj"/>
+                            <constraint firstItem="y6y-D2-QDT" firstAttribute="leading" secondItem="270-dF-y2C" secondAttribute="leading" constant="10" id="s6m-AI-7cH"/>
+                            <constraint firstItem="3dW-2m-hU9" firstAttribute="top" secondItem="270-dF-y2C" secondAttribute="top" constant="10" id="xDu-cw-dfj"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -9,27 +9,28 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    //MARK: vars
     var window: UIWindow?
-
-
+    let navigationController = UINavigationController()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-     
+        
+        //MARK: setting articles as root screen with navigation
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-       
-        let rootViewController: UIViewController = Details(nibName: "Details", bundle: nil)
-        let navigationController = UINavigationController()
+        let rootViewController: UIViewController = ArticlesVC(nibName: "Articles", bundle: nil)
+      
+        //MARK: customize navigation
+        rootViewController.navigationItem.largeTitleDisplayMode = .always
         navigationController.navigationBar.prefersLargeTitles = true
         rootViewController.title = "News"
         navigationController.pushViewController(rootViewController, animated: true)
-
+        
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
-
+    
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

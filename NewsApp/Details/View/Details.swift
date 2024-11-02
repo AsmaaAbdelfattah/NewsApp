@@ -40,6 +40,9 @@ class Details: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let fav = article?.isFav{
+            addToFavBtn.isHidden = fav
+        }
         bindArticle()
         handleSaveToCoreData()
     }

@@ -35,20 +35,23 @@
                     </connections>
                 </searchBar>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-0c-3N4">
-                    <rect key="frame" x="20.000000000000004" y="134" width="39.333333333333343" height="44"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="20" y="134" width="42" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="lbL-DY-RlO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqT-k3-HIQ">
                     <rect key="frame" x="215.66666666666663" y="134" width="157.33333333333337" height="44"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="tintColor" systemColor="tintColor"/>
+                    <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="9fU-7M-A9j"/>
                     </constraints>
-                    <date key="date" timeIntervalSinceReferenceDate="749500135.61598396">
-                        <!--2024-10-01 18:28:55 +0000-->
+                    <date key="date" timeIntervalSinceReferenceDate="749586535.61598396">
+                        <!--2024-10-02 18:28:55 +0000-->
                     </date>
                     <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                         <!--2020-01-01 11:00:00 +0000-->
@@ -92,6 +95,7 @@
                 <constraint firstItem="X6i-6s-hNC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Dfd-qb-hwS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7CL-3E-u5S" secondAttribute="trailing" constant="20" id="Fey-GZ-HcD"/>
                 <constraint firstItem="Vn6-0c-3N4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GkB-o3-90b"/>
+                <constraint firstItem="eDk-93-lg6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Nhw-T2-kCK"/>
                 <constraint firstItem="Vn6-0c-3N4" firstAttribute="top" secondItem="eDk-93-lg6" secondAttribute="bottom" constant="10" id="R1r-aZ-Dbb"/>
                 <constraint firstItem="eDk-93-lg6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="SFY-SY-hou"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eDk-93-lg6" secondAttribute="trailing" constant="10" id="Ufw-JN-HdE"/>
@@ -101,7 +105,6 @@
                 <constraint firstItem="NPt-HA-4xY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bpN-qC-JOF"/>
                 <constraint firstItem="7CL-3E-u5S" firstAttribute="top" secondItem="X6i-6s-hNC" secondAttribute="bottom" constant="10" id="cdV-Wo-fmQ"/>
                 <constraint firstItem="AqT-k3-HIQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vn6-0c-3N4" secondAttribute="trailing" constant="4" id="cnQ-6y-nFw"/>
-                <constraint firstItem="eDk-93-lg6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="gwg-wh-94j"/>
                 <constraint firstAttribute="trailing" secondItem="AqT-k3-HIQ" secondAttribute="trailing" constant="20" id="pg9-b1-vMG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X6i-6s-hNC" secondAttribute="trailing" constant="20" id="q9t-R4-rbi"/>
                 <constraint firstItem="7CL-3E-u5S" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ulg-HZ-m7y"/>
@@ -112,13 +115,10 @@
     </objects>
     <resources>
         <namedColor name="Background">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

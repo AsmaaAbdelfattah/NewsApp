@@ -12,6 +12,7 @@ class FavouriteViewModel:ObservableObject{
     let container: NSPersistentContainer
     @Published var savedEntity:[FavouriteArticleEntity] = []
     @Published var savedSuccesfully:Bool?
+   
     init(){
         container = NSPersistentContainer(name: "FavouriteArticles")
         container.loadPersistentStores { desc, error in
@@ -27,8 +28,9 @@ class FavouriteViewModel:ObservableObject{
     func fetchArticles(){
         let request = NSFetchRequest<FavouriteArticleEntity>(entityName: "FavouriteArticleEntity")
         do {
+            
           savedEntity =  try container.viewContext.fetch(request)
-           
+
         }catch let error {
             print("fetch core data error \(error.localizedDescription)")
         }
@@ -41,10 +43,10 @@ class FavouriteViewModel:ObservableObject{
         newArticle.author = article.author
         newArticle.content = article.content
         newArticle.desc = article.description
-        newArticle.isFav = article.isFav ?? false
-        newArticle.publishedAt = article.publishedAt
+        newArticle.isFav = true
+     //   newArticle.publishedAt = article.publishedAt
         newArticle.title = article.title
-        newArticle.url = article.url
+      //  newArticle.url = article.url
         newArticle.urlToImage = article.urlToImage
       
         saveArticle()

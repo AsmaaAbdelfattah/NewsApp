@@ -22,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         let rootViewController: UIViewController = ArticlesVC(nibName: "Articles", bundle: nil)
         let navigationController = UINavigationController()
+        navigationController.navigationBar.prefersLargeTitles = true
+        rootViewController.title = "News"
         navigationController.pushViewController(rootViewController, animated: true)
 
         window?.rootViewController = navigationController

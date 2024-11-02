@@ -16,11 +16,7 @@ class ArticlesVC: UIViewController {
             searchBar.delegate = self
         }
     }
-    @IBOutlet weak var date: UIDatePicker!{
-        didSet{
-            date.setValue(UIColor.systemBlue, forKey: "textColor")
-        }
-    }
+    @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var articlesCv: UICollectionView!{
         didSet{
             articlesCv.register(UINib(nibName: "ArticlesCVCell", bundle: nil), forCellWithReuseIdentifier: "ArticlesCVCell")
@@ -37,9 +33,11 @@ class ArticlesVC: UIViewController {
     var dateValue:String?
     var page = 1
     var currentIndex = 0
+    
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        date.setValue(UIColor.red, forKeyPath: "textColor")
         dateValue = formatDate(from: date.date)
         if let date = dateValue {
             bindArticles(date: date, searchTxt: searchTxt)

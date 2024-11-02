@@ -35,6 +35,11 @@ class ArticlesVC: UIViewController {
     var currentIndex = 0
     
     //MARK: lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addRightButton()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         date.setValue(UIColor.red, forKeyPath: "textColor")
@@ -42,6 +47,11 @@ class ArticlesVC: UIViewController {
 //        if let date = dateValue {
 //            bindArticles(date: date, searchTxt: searchTxt)
 //        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeRightButton()
     }
  
    //MARK: get data

@@ -28,8 +28,9 @@ class FavouriteViewModel:ObservableObject{
     func fetchArticles(){
         let request = NSFetchRequest<FavouriteArticleEntity>(entityName: "FavouriteArticleEntity")
         do {
+            
           savedEntity =  try container.viewContext.fetch(request)
-           
+
         }catch let error {
             print("fetch core data error \(error.localizedDescription)")
         }

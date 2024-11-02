@@ -24,7 +24,7 @@ class Favourite: UIViewController {
     //MARK: handle lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-      readData()
+        readData()
         
     }
     
@@ -60,10 +60,10 @@ extension Favourite: UICollectionViewDelegate,UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
     }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = Details(nibName: "Details", bundle: nil)
-//        vc.title = "Details"
-//        vc.article = viewModel.savedEntity[indexPath.row]
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = Details(nibName: "Details", bundle: nil)
+        vc.title = "Details"
+        vc.article = convertFromContextIntoArticle(article:  viewModel.savedEntity[indexPath.row] )
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
